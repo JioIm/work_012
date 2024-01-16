@@ -1,0 +1,118 @@
+* {
+    outline: 1px solid skyblue;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+.wrap {}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    color: #202124;
+}
+
+#header .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10rem;
+    margin: 0 auto;
+    max-width: 160rem;
+}
+
+#header h1 a img {
+    width: 25rem;
+}
+
+#header .gnb .depth1 {
+    display: flex;
+    gap: 4rem;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+#header .util .util_wrap {
+    display: flex;
+    gap: 3rem;
+}
+
+#header .util .util_wrap li~li::before {
+    content: "";
+    height: 2px;
+    width: 14px;
+    color: aquamarine;
+}
+
+#header .mopen {
+    display: none;
+}
+
+.MainVisual {
+    position: relative;
+}
+
+
+.MainVisual .content {
+    position: absolute;
+    mix-blend-mode: difference;
+    width: 160rem;
+    margin: 0 auto;
+    top: 50%;
+    left: 0;
+    right: 0;
+    text-align: left;
+    transform: translate(0, -50%);
+    z-index: 1000;
+    color: #202124;
+}
+
+.MainVisual .content span {
+    display: block;
+    font-size: 3.2rem;
+    font-weight: 500;
+    margin: 0 0 1.8rem 0;
+}
+
+.MainVisual .content strong {
+    font-size: 5rem;
+}
+
+
+.MainVisual .main_visual_slide {
+    position: relative;
+}
+
+.MainVisual .itm {
+    position: relative;
+    height: 100vh;
+}
+
+.MainVisual .itm01 {
+    background: url(../images/main_visual_001.jpg)no-repeat center center/cover;
+}
+
+.MainVisual .itm02 {
+    background: url(../images/main_visual_002.png)no-repeat center center/cover;
+}
+
+.MainVisual .itm03 {
+    background: url(../images/main_visual_003.png)no-repeat center center/cover;
+}
+
+.MainVisual .itm04 {
+    background: url(../images/main_visual_004.jpg)no-repeat center center/cover;
+}
+
+.MainVisual .itm05 {
+    background: url(../images/main_visual_005.jpg)no-repeat center center/cover;
+}
