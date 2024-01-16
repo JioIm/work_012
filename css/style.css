@@ -1,5 +1,5 @@
 * {
-    outline: 1px solid skyblue;
+    outline: 1px solid skyblue--;
 }
 
 html {
@@ -64,7 +64,6 @@ body {
 
 .MainVisual .content {
     position: absolute;
-    mix-blend-mode: difference;
     width: 160rem;
     margin: 0 auto;
     top: 50%;
@@ -73,7 +72,6 @@ body {
     text-align: left;
     transform: translate(0, -50%);
     z-index: 1000;
-    color: #202124;
 }
 
 .MainVisual .content span {
@@ -115,4 +113,60 @@ body {
 
 .MainVisual .itm05 {
     background: url(../images/main_visual_005.jpg)no-repeat center center/cover;
+}
+
+
+
+.MainTab {
+    background: url(../images/bg_003.png) no-repeat right bottom;
+}
+
+
+.MainTab .inner .main_tab {
+    display: flex;
+    gap: 2rem;
+    margin: 0 0 0 auto;
+}
+
+.MainTab .inner .main_tab li {
+    font-size: 1.8rem;
+    text-align: center;
+    border: 1px solid #9d9272;
+    line-height: 2.4rem;
+    padding: 0 2.4rem;
+}
+
+.MainTab .inner .main_tab li.on {
+    border: 1px solid #9d9272;
+    background: #9d9272;
+    color: #fff;
+}
+
+.MainTab .tab_inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    max-width: 120rem;
+}
+
+.MainTab .tab_inner img {
+    width: 100%;
+    margin: 0 0 16px 0;
+}
+
+.tab_content .content {
+    display: none;
+}
+
+.tab_content .content.on {
+    display: block;
+}
+
+.txt_box {
+    text-align: center;
+}
+
+.tab_content .content p {
+    font-size: 16px;
+    font-weight: 500;
 }

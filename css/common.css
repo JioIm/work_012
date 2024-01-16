@@ -13,21 +13,23 @@
     padding: 100px 0;
 }
 
-.default .title {
+.default .tit_area {
     max-width: 1200px;
-    margin: 0 auto 32px auto;
-    padding: 0 15px;
+    margin: 0 auto 8px auto;
+    /* padding: 0 15px; */
 }
 
-.default .title h2 {
-    font-size: 32px;
+.default .tit_area span {
+    display: block;
+    font-size: 24px;
     font-weight: 600;
-    /* margin: 0 0 8px 0; */
+    margin: 0 0 8px 0;
     /* 마진을 아래쪽으로만 주는 원칙을 깬다. */
 }
 
-.default .title p {
-    margin: 16px 0 0 0;
+.default .tit_area p {
+    font-size: 16px;
+    margin: 0 0 24px 0;
 }
 
 
