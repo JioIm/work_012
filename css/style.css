@@ -12,6 +12,8 @@ body {
 
 .wrap {}
 
+/* header */
+
 #header {
     position: fixed;
     top: 0;
@@ -19,13 +21,22 @@ body {
     right: 0;
     z-index: 1000;
     color: #202124;
-    border-bottom: 1px solid rgba(90, 90, 90, 0.8);
+    line-height: 10rem;
+
+    background: linear-gradient(to top, #ffffff00 0%, #ffffffa8 90%);
+
+/* glass effect */
+    /* background: rgba(150, 150, 150, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(6.9px);
+    border: 1px solid rgba(255, 255, 255, 0.3); */
 }
 
 #header:hover {
     color: #202124;
     background: #fff;
-    border-bottom: 1px solid rgba(90, 90, 90, 0.8);
+    border-bottom: 1px solid rgba(200, 200, 200, 0.8);
     transition: 0.3s;
 }
 
@@ -42,7 +53,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10rem;
     margin: 0 auto;
     max-width: 160rem;
 }
@@ -64,16 +74,26 @@ body {
     gap: 3rem;
 }
 
-#header .util .util_wrap li~li::before {
+#header .util .util_wrap>li {
+    position: relative;
+}
+
+#header .util .util_wrap>li~li::before {
     content: "";
-    height: 2px;
-    width: 14px;
-    color: aquamarine;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0, -50%);
+    height: 10px;
+    width: 10px;
+    color: aqua;
 }
 
 #header .mopen {
     display: none;
 }
+
+/*메인비주얼슬라이드 */
 
 .MainVisual {
     position: relative;
@@ -89,7 +109,7 @@ body {
     right: 0;
     text-align: left;
     transform: translate(0, -50%);
-    z-index: 1000;
+    z-index: 999;
     font-family: 'Noto Serif KR', serif;
 }
 
@@ -115,35 +135,34 @@ body {
 }
 
 .MainVisual .itm01 {
-    background: url(../images/main_visual_001.jpg)no-repeat center center/cover;
-}
-
-.MainVisual .itm02 {
     background: url(../images/main_visual_002.png)no-repeat center center/cover;
 }
 
-.MainVisual .itm03 {
+.MainVisual .itm02 {
     background: url(../images/main_visual_003.png)no-repeat center center/cover;
 }
 
-.MainVisual .itm04 {
+.MainVisual .itm03 {
     background: url(../images/main_visual_004.jpg)no-repeat center center/cover;
 }
 
-.MainVisual .itm05 {
+.MainVisual .itm04 {
     background: url(../images/main_visual_005.jpg)no-repeat center center/cover;
 }
 
-
+/* 메인 탭버튼 콘텐츠 */
 
 .MainTab {
     background: url(../images/bg_003.png) no-repeat right bottom;
 }
 
+.MainTab .inner .tit_area {
+    border-bottom: 1px solid #9d9272;
+}
 
 .MainTab .inner .main_tab {
     display: flex;
-    margin: 0 0 0 auto;
+    margin: 0 0 2rem auto;
 }
 
 .MainTab .inner .main_tab li {
@@ -176,6 +195,10 @@ body {
     margin: 0 0 16px 0;
 }
 
+.tab_content {
+    margin: 2rem 0 0 0;
+}
+
 .tab_content .content {
     display: none;
 }
@@ -192,6 +215,20 @@ body {
     font-size: 14px;
     font-weight: 300;
 }
+
+/* 메인콘텐츠 슬라이드 */
+
+.MainContent {
+    background: #f9f9f9;
+}
+
+.MainContent .container {
+    display: flex;
+    max-width: 1200px;
+        margin: 0 auto;
+}
+
+/* 중간 와이드 배너 */
 
 .MainBanner {
     background: url(../images/banner_001.jpg) fixed;
@@ -219,7 +256,7 @@ body {
     line-height: 2.2rem;
 }
 
-
+/* 메인 인포메이션_광주요 그룹내 브랜드 */
 
 .MainInfo {}
 
@@ -282,7 +319,7 @@ body {
 
 .MainInfo .itm_wrap .itm .txt_wrap h3 {
     font-size: 3rem;
-    font-weight: 800;
+    font-weight: 600;
     text-transform: uppercase;
     writing-mode: vertical-rl;
     margin: auto;
@@ -333,4 +370,33 @@ body {
     margin: 0 0 1.6rem 0;
     border: 1px solid #fff;
     padding: 0.4rem 2rem;
+}
+
+/* footer */
+
+.footer {
+    padding: 6rem 0 8rem 0;
+    background: #3F403C;
+}
+
+.footer .inner{
+    max-width: 120rem;
+}
+
+.footer .inner_wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .footer_menu{
+    display: flex;
+    gap: 1.2rem;
+    border-bottom: 1px solid #fff;
+    padding: 0 0 2rem 0;
+}
+
+.footer .address ul{
+    display: flex;
+     gap: 1.2rem;
+    padding: 2rem 0 0 0;
 }
