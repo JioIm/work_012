@@ -19,17 +19,20 @@
     /* padding: 0 15px; */
 }
 
-.default .tit_area span {
+.default h2 {
     display: block;
-    font-size: 24px;
+    font-size: 32px;
     font-weight: 600;
-    margin: 0 0 8px 0;
+    margin: 0 0 16px 0;
+    letter-spacing: -2px;
+    font-family: 'Noto Serif KR', serif;
     /* 마진을 아래쪽으로만 주는 원칙을 깬다. */
 }
 
 .default .tit_area p {
-    font-size: 16px;
-    margin: 0 0 24px 0;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0 0 28px 0;
 }
 
 

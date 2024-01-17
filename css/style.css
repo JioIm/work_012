@@ -19,7 +19,24 @@ body {
     right: 0;
     z-index: 1000;
     color: #202124;
+    border-bottom: 1px solid rgba(90, 90, 90, 0.8);
 }
+
+#header:hover {
+    color: #202124;
+    background: #fff;
+    border-bottom: 1px solid rgba(90, 90, 90, 0.8);
+    transition: 0.3s;
+}
+
+
+#header.on {
+    color: #202124;
+    background: #fff;
+    border-bottom: 1px solid rgba(230, 230, 230, 0.8);
+    line-height: 8rem;
+}
+
 
 #header .inner {
     display: flex;
@@ -35,6 +52,7 @@ body {
 }
 
 #header .gnb .depth1 {
+    font-family: 'Noto Serif KR', serif;
     display: flex;
     gap: 4rem;
     font-size: 2rem;
@@ -64,7 +82,7 @@ body {
 
 .MainVisual .content {
     position: absolute;
-    width: 160rem;
+    width: 120rem;
     margin: 0 auto;
     top: 50%;
     left: 0;
@@ -72,6 +90,7 @@ body {
     text-align: left;
     transform: translate(0, -50%);
     z-index: 1000;
+    font-family: 'Noto Serif KR', serif;
 }
 
 .MainVisual .content span {
@@ -124,7 +143,6 @@ body {
 
 .MainTab .inner .main_tab {
     display: flex;
-    gap: 2rem;
     margin: 0 0 0 auto;
 }
 
@@ -132,14 +150,18 @@ body {
     font-size: 1.8rem;
     text-align: center;
     border: 1px solid #9d9272;
-    line-height: 2.4rem;
-    padding: 0 2.4rem;
+    line-height: 2.2rem;
+    padding: 0.4rem 3.2rem;
 }
 
 .MainTab .inner .main_tab li.on {
     border: 1px solid #9d9272;
     background: #9d9272;
     color: #fff;
+}
+
+.MainTab .inner .main_tab li a {
+    font-size: 1.4rem;
 }
 
 .MainTab .tab_inner {
@@ -167,6 +189,148 @@ body {
 }
 
 .tab_content .content p {
-    font-size: 16px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.MainBanner {
+    background: url(../images/banner_001.jpg) fixed;
+}
+
+.MainBanner .inner {
+    padding: 14rem 0;
+}
+
+.MainBanner .txt_area {
+    text-align: center;
+}
+
+.MainBanner .txt_area h2 {
+    display: block;
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin: 0 0 3.2rem 0;
+    font-family: 'Noto Serif KR', serif;
+}
+
+.MainBanner .txt_area p {
+    font-size: 1.8rem;
     font-weight: 500;
+    line-height: 2.2rem;
+}
+
+
+
+.MainInfo {}
+
+.MainInfo .itm_wrap {
+    display: flex;
+}
+
+.MainInfo .itm_wrap>* {
+    position: relative;
+    flex: 1;
+    padding: 5rem;
+    height: 40rem;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.MainInfo .itm_wrap .itm {
+    position: relative;
+}
+
+.MainInfo .itm_wrap>*.on {
+    flex: 9;
+}
+
+.MainInfo .itm_wrap .itm::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 0 0;
+    transition: flex 0.5s;
+    backdrop-filter: blur(1);
+    background: linear-gradient(to top, #00000000 0%, #000000b3 70%);
+}
+
+.MainInfo .itm_wrap .itm.on::before {
+    content: "";
+    background: linear-gradient(to bottom, #00000000 0%, #000000b3 90%);
+    backdrop-filter: blur(0);
+}
+
+.MainInfo .itm_wrap .itm01 {
+    background: url(../images/KWANGJUYO.jpg) no-repeat right bottom/700px auto;
+}
+
+.MainInfo .itm_wrap .itm02 {
+    background: url(../images/hwayo.jpg) no-repeat left bottom/700px auto;
+}
+
+.MainInfo .itm_wrap .itm03 {
+    background: url(../images/GAON.jpg) no-repeat center center/700px auto;
+}
+
+.MainInfo .itm_wrap .itm04 {
+    background: url(../images/BICENA.jpg) no-repeat center center/700px auto;
+}
+
+.MainInfo .itm_wrap .itm .txt_wrap {
+    position: relative;
+    color: #fff;
+}
+
+.MainInfo .itm_wrap .itm .txt_wrap h3 {
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    writing-mode: vertical-rl;
+    margin: auto;
+    font-family: 'Noto Serif KR', serif;
+    min-height: 180px;
+}
+
+.MainInfo .itm_wrap .itm .txt {
+    display: none;
+}
+
+/* .on */
+
+.MainInfo .itm_wrap .itm.on .txt_wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.MainInfo .itm_wrap .itm.on .txt {
+    display: block;
+}
+
+.MainInfo .itm_wrap .itm.on h3 {
+    writing-mode: horizontal-tb;
+    margin: 0;
+}
+
+.MainInfo .itm_wrap .itm .txt span {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin: 0 0 1.2rem 0;
+}
+
+.MainInfo .itm_wrap .itm .txt p {
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.8rem;
+    min-height: 60px;
+    white-space: nowrap;
+}
+
+.MainInfo .itm_wrap .itm.on .txt a {
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.8rem;
+    margin: 0 0 1.6rem 0;
+    border: 1px solid #fff;
+    padding: 0.4rem 2rem;
 }
