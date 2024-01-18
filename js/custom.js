@@ -9,7 +9,10 @@ $(function () {
     });
 
     $('.MainVisual .main_visual_slide').slick({
-        arrows: false,
+        arrows: true,
+
+           prevArrow: $('.MainVisual .arrows .left'),
+        nextArrow: $('.MainVisual .arrows .right'),
     });
 
     $('.main_tab li').on('click', function (e) {
