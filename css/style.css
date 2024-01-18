@@ -20,12 +20,10 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    color: #202124;
+    color: #fff;
     line-height: 10rem;
 
-    background: linear-gradient(to top, #ffffff00 0%, #ffffffa8 90%);
-
-/* glass effect */
+    /* glass effect */
     /* background: rgba(150, 150, 150, 0.3);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(2px);
@@ -40,6 +38,9 @@ body {
     transition: 0.3s;
 }
 
+#header:hover h1 a {
+    filter: invert(80%);
+}
 
 #header.on {
     color: #202124;
@@ -48,6 +49,9 @@ body {
     line-height: 8rem;
 }
 
+#header.on h1 a {
+    filter: invert(80%);
+}
 
 #header .inner {
     display: flex;
@@ -109,6 +113,8 @@ body {
     right: 0;
     text-align: left;
     transform: translate(0, -50%);
+    color: #fff;
+    text-shadow: 1px 0 3px rgba(0, 0, 0, 0.6);
     z-index: 999;
     font-family: 'Noto Serif KR', serif;
 }
@@ -135,7 +141,7 @@ body {
 }
 
 .MainVisual .itm01 {
-    background: url(../images/main_visual_002.png)no-repeat center center/cover;
+    background: linear-gradient(to top, #00000000 0%, #00000069 100%), url(../images/main_visual_002.png)no-repeat center center/cover;
 }
 
 .MainVisual .itm02 {
@@ -143,17 +149,35 @@ body {
 }
 
 .MainVisual .itm03 {
-    background: url(../images/main_visual_004.jpg)no-repeat center center/cover;
+    background: linear-gradient(to top, #00000000 0%, #83838342 90%), url(../images/main_visual_004.jpg)no-repeat center center/cover;
 }
 
-.MainVisual .itm04 {
-    background: url(../images/main_visual_005.jpg)no-repeat center center/cover;
+.MainVisual .arrows {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+
+    max-width: 180rem;
+    width: 100%;
+    padding: 0 1.6rem;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.material-symbols-outlined {
+    font-size: 10rem;
+    font-weight: 200;
 }
 
 /* 메인 탭버튼 콘텐츠 */
 
 .MainTab {
-    background: url(../images/bg_003.png) no-repeat right bottom;
+    background: url(../images/bg_003.png) no-repeat right center/ 30%;
 }
 
 .MainTab .inner .tit_area {
@@ -193,6 +217,7 @@ body {
 .MainTab .tab_inner img {
     width: 100%;
     margin: 0 0 16px 0;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
 .tab_content {
@@ -222,16 +247,109 @@ body {
     background: #f9f9f9;
 }
 
-.MainContent .container {
+.MainContent .container {}
+
+.MainContent .container .thumb_slide {
+    margin: 0 0 1.6rem 0;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.MainContent .container .thumb_slide figure {
     display: flex;
-    max-width: 1200px;
-        margin: 0 auto;
+    overflow: hidden;
+    align-items: center;
+    background: #fff;
+
+}
+
+.MainContent .container .thumb_slide figure .img_box {
+    flex: 6;
+}
+
+.MainContent .container .thumb_slide figure .txt_box {
+    flex: 4;
+    padding: 3rem;
+}
+
+.MainContent .container .thumb_slide figure .txt_box span {
+    display: block;
+    font-family: 'Noto Serif KR', serif;
+    font-size: 3.2rem;
+    margin: 0 0 2rem 0;
+}
+
+.MainContent .container .thumb_slide figure .txt_box span::after {
+    content: "";
+    display: block;
+    width: 2rem;
+    height: 0.1rem;
+    background: #9d9272;
+    margin: 2rem auto;
+}
+
+.MainContent .container .thumb_slide figure .txt_box p {
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
+    margin: 0 0 4rem 0;
+}
+
+.MainContent .container .thumb_slide figure .txt_box a {
+    line-height: 1.8rem;
+    margin: 0 0 1.6rem 0;
+    border: 1px solid #9d9272;
+    padding: 0.4rem 2.4rem;
+}
+
+.MainContent .bottom_slide {
+    position: relative;
+}
+
+.MainContent .container .nav_slide figure {
+    margin: 0 8px;
+    overflow: hidden;
+}
+
+.MainContent .container .nav_slide figure img {
+    filter: grayscale(1) brightness(70%);
+}
+
+.MainContent .container .nav_slide figure.on img {
+    filter: grayscale(0);
+}
+
+.MainContent .bottom_slide .arrows {
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 0.8rem;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.MainContent .bottom_slide .arrows span {
+    font-size: 3rem;
+    font-weight: 300;
+    color: #fff;
+}
+
+.MainContent .bottom_slide .arrows .left {
+    left: 0;
+}
+
+.MainContent .bottom_slide .arrows .right {
+    right: 0;
 }
 
 /* 중간 와이드 배너 */
 
 .MainBanner {
-    background: url(../images/banner_001.jpg) fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.5)), url(../images/banner_001.jpg) fixed;
 }
 
 .MainBanner .inner {
@@ -239,6 +357,7 @@ body {
 }
 
 .MainBanner .txt_area {
+    color: #fff;
     text-align: center;
 }
 
@@ -252,8 +371,7 @@ body {
 
 .MainBanner .txt_area p {
     font-size: 1.8rem;
-    font-weight: 500;
-    line-height: 2.2rem;
+    line-height: 2.4rem;
 }
 
 /* 메인 인포메이션_광주요 그룹내 브랜드 */
@@ -379,7 +497,7 @@ body {
     background: #3F403C;
 }
 
-.footer .inner{
+.footer .inner {
     max-width: 120rem;
 }
 
@@ -388,15 +506,15 @@ body {
     flex-direction: column;
 }
 
-.footer .footer_menu{
+.footer .footer_menu {
     display: flex;
     gap: 1.2rem;
     border-bottom: 1px solid #fff;
     padding: 0 0 2rem 0;
 }
 
-.footer .address ul{
+.footer .address ul {
     display: flex;
-     gap: 1.2rem;
+    gap: 1.2rem;
     padding: 2rem 0 0 0;
 }
