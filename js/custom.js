@@ -11,7 +11,7 @@ $(function () {
     $('.MainVisual .main_visual_slide').slick({
         arrows: true,
 
-           prevArrow: $('.MainVisual .arrows .left'),
+        prevArrow: $('.MainVisual .arrows .left'),
         nextArrow: $('.MainVisual .arrows .right'),
     });
 
@@ -53,6 +53,16 @@ $(function () {
 
         prevArrow: $('.bottom_slide .arrows .left'),
         nextArrow: $('.bottom_slide .arrows .right'),
+
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
     });
 
 
@@ -63,6 +73,8 @@ $(function () {
     });
 
 
-
-
+    $('.mopen').on('click', function () {
+        $('.gnb').toggleClass('on');
+        $(this).find('.hamburger').toggleClass('is-active');
+    });
 })
